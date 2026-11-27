@@ -23,9 +23,8 @@ export const images = {
     "width": 1920,
     "height": 2560,
     "alt": {
-      "value": null,
-      "isTodo": true,
-      "todo": "Add accurate alt text for the hero photo."
+      "value": "Priyanshu Raj, portrait",
+      "isTodo": false
     },
     "sources": {
       "avif": [
@@ -71,9 +70,8 @@ export const images = {
     "width": 1920,
     "height": 2560,
     "alt": {
-      "value": null,
-      "isTodo": true,
-      "todo": "Add accurate alt text for the about photo."
+      "value": "Priyanshu Raj, portrait",
+      "isTodo": false
     },
     "sources": {
       "avif": [
@@ -119,9 +117,8 @@ export const images = {
     "width": 1920,
     "height": 2560,
     "alt": {
-      "value": null,
-      "isTodo": true,
-      "todo": "Add accurate alt text for the contact photo."
+      "value": "Priyanshu Raj, portrait",
+      "isTodo": false
     },
     "sources": {
       "avif": [

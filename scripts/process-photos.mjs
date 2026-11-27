@@ -164,9 +164,8 @@ for (const name of photoNames) {
     width: manifestWidth,
     height: manifestHeight,
     alt: {
-      value: null,
-      isTodo: true,
-      todo: `Add accurate alt text for the ${name} photo.`,
+      value: "Priyanshu Raj, portrait",
+      isTodo: false,
     },
     sources: variants,
     blurDataURL: `data:image/webp;base64,${placeholder.toString("base64")}`,

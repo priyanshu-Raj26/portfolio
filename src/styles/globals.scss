@@ -1,0 +1,85 @@
+@use "tokens";
+@use "mixins";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--color-void);
+  color: var(--color-bone);
+  font-family: var(--font-body);
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 20rem;
+  min-height: 100dvh;
+  margin: 0;
+  background: var(--color-void);
+  color: var(--color-bone);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+a {
+  @include mixins.focus-visible;
+}
+
+button {
+  font: inherit;
+}
+
+::selection {
+  background: var(--color-signal);
+  color: var(--color-void);
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 10;
+  top: var(--space-4);
+  left: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  transform: translateY(-200%);
+  background: var(--color-signal);
+  color: var(--color-void);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-decoration: none;
+  transition: transform 160ms ease;
+
+  &:focus {
+    transform: translateY(0);
+  }
+}
+
+.site-shell {
+  min-height: 100dvh;
+}
+
+.page-container {
+  @include mixins.content-container;
+}
+
+@include mixins.reduce-motion {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

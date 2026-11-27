@@ -1,4 +1,10 @@
 source-photos
-build-prompt.md
-portfolio-info.md
-theme.md
+
+node_modules
+content
+prompts
+.next
+out
+dist
+*.tsbuildinfo
+next-env.d.ts

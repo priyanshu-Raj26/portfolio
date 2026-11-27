@@ -1,0 +1,21 @@
+@mixin content-container {
+  width: min(100% - (2 * var(--content-gutter)), var(--content-max));
+  margin-inline: auto;
+}
+
+@mixin fluid-type($min, $preferred, $max) {
+  font-size: clamp($min, $preferred, $max);
+}
+
+@mixin focus-visible {
+  &:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+  }
+}
+
+@mixin reduce-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}

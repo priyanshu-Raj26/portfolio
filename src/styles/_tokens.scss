@@ -1,0 +1,28 @@
+:root {
+  --color-void: #050505;
+  --color-graphite: #121214;
+  --color-bone: #edede8;
+  --color-ash: #8a8a90;
+  --color-signal: #3df5ff;
+
+  --font-display: var(--font-anton), Impact, sans-serif;
+  --font-serif: var(--font-instrument-serif), Georgia, serif;
+  --font-body: var(--font-inter), Arial, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), "Courier New", monospace;
+  --font-hero: var(--font-michroma), var(--font-display);
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+
+  --content-max: 90rem;
+  --content-gutter: clamp(1.25rem, 4vw, 4rem);
+  --border-subtle: rgba(237, 237, 232, 0.18);
+  --focus-ring: 0 0 0 0.2rem var(--color-void), 0 0 0 0.35rem var(--color-signal);
+}

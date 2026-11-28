@@ -1,12 +1,12 @@
 .experienceList {
-  border-top: 1px solid var(--border-subtle);
+  border-top: 1px solid var(--border);
 }
 
 .experienceEntry {
   display: grid;
   gap: 0.75rem;
   padding-block: 1.4rem;
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border);
 
   h3 {
     margin: 0;
@@ -24,7 +24,7 @@
 .experienceMeta {
   p {
     margin: 0 0 0.3rem;
-    color: var(--color-ash);
+    color: var(--muted);
     font-family: var(--font-mono);
     font-size: 0.68rem;
   }
@@ -32,7 +32,7 @@
 
 .experienceDepartment {
   margin: 0.3rem 0;
-  color: var(--color-ash);
+  color: var(--muted);
   font-size: 0.85rem;
 }
 
@@ -41,17 +41,17 @@
   gap: 0.55rem;
   margin: 1rem 0 0;
   padding-left: 1.1rem;
-  color: var(--color-ash);
+  color: var(--muted);
   font-size: 0.84rem;
   line-height: 1.6;
 
   li::marker {
-    color: var(--color-signal);
+    color: var(--accent);
   }
 }
 
 .smallLink {
-  color: var(--color-signal);
+  color: var(--accent);
   font-family: var(--font-mono);
   font-size: 0.72rem;
   text-decoration: underline;

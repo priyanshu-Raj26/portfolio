@@ -19,14 +19,18 @@
   bottom: 2rem;
   left: 0;
   width: 1px;
-  background: linear-gradient(var(--color-signal), transparent);
+  background: linear-gradient(var(--accent), transparent);
 }
 
 .skillGroup {
   position: relative;
   padding: 1rem;
-  border: 1px solid var(--border-subtle);
-  background: linear-gradient(110deg, var(--color-graphite), rgba(18, 18, 20, 0.55));
+  border: 1px solid var(--border);
+  background: linear-gradient(
+    110deg,
+    var(--surface),
+    color-mix(in srgb, var(--surface) 55%, transparent)
+  );
 
   &::before {
     position: absolute;
@@ -34,23 +38,23 @@
     left: -1.45rem;
     width: 0.55rem;
     height: 0.55rem;
-    border: 1px solid var(--color-signal);
-    background: var(--color-void);
+    border: 1px solid var(--accent);
+    background: var(--bg);
     content: "";
   }
 }
 
 .practiceNote {
   max-width: 42rem;
-  color: var(--color-ash);
+  color: var(--muted);
   font-size: 0.9rem;
   line-height: 1.7;
 }
 
 .dsaPanel {
   padding: 1.25rem;
-  border: 1px solid var(--border-subtle);
-  background: var(--color-graphite);
+  border: 1px solid var(--border);
+  background: var(--surface);
 }
 
 .dsaPanelHeader {
@@ -70,7 +74,7 @@
 }
 
 .smallLink {
-  color: var(--color-signal);
+  color: var(--accent);
   font-family: var(--font-mono);
   font-size: 0.72rem;
   text-decoration: underline;
@@ -81,18 +85,18 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin: 1.5rem 0 0;
-  border-top: 1px solid var(--border-subtle);
-  border-left: 1px solid var(--border-subtle);
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
 
   div {
     min-width: 0;
     padding: 0.85rem;
-    border-right: 1px solid var(--border-subtle);
-    border-bottom: 1px solid var(--border-subtle);
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
   }
 
   dt {
-    color: var(--color-ash);
+    color: var(--muted);
     font-family: var(--font-mono);
     font-size: 0.62rem;
     text-transform: uppercase;
@@ -107,7 +111,7 @@
 }
 
 .statsFootnote {
-  color: var(--color-ash);
+  color: var(--muted);
   font-family: var(--font-mono);
   font-size: 0.66rem;
   line-height: 1.6;

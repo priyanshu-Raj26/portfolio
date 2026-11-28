@@ -4,9 +4,9 @@
   min-height: 100dvh;
   overflow: clip;
   background:
-    linear-gradient(rgba(237, 237, 232, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(237, 237, 232, 0.025) 1px, transparent 1px),
-    var(--color-void);
+    linear-gradient(color-mix(in srgb, var(--text) 2.5%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--text) 2.5%, transparent) 1px, transparent 1px),
+    var(--bg);
   background-size: 4rem 4rem;
 }
 

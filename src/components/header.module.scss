@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: flex-end;
   gap: var(--space-5);
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border);
   @include mixins.content-container;
 }
 
@@ -20,7 +20,7 @@
   gap: 0.5rem 1.1rem;
 
   a {
-    color: var(--color-ash);
+    color: var(--muted);
     font-family: var(--font-mono);
     font-size: 0.66rem;
     text-decoration: none;
@@ -28,7 +28,7 @@
     transition: color 160ms ease;
 
     &:hover {
-      color: var(--color-signal);
+      color: var(--accent);
     }
   }
 }
@@ -41,8 +41,8 @@
   justify-content: center;
   gap: 0.65rem;
   padding-inline: 1rem;
-  border: 1px solid var(--color-signal);
-  color: var(--color-signal);
+  border: 1px solid var(--accent);
+  color: var(--accent);
   font-family: var(--font-mono);
   font-size: 0.72rem;
   text-decoration: none;

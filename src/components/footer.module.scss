@@ -8,7 +8,7 @@
   justify-content: space-between;
   gap: 1rem;
   padding-block: 1.3rem 2rem;
-  color: var(--color-ash);
+  color: var(--muted);
   font-family: var(--font-mono);
   font-size: 0.68rem;
   text-transform: uppercase;
@@ -18,7 +18,7 @@
   }
 
   a {
-    color: var(--color-bone);
+    color: var(--text);
     text-decoration: none;
   }
 }

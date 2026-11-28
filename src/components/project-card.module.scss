@@ -1,7 +1,7 @@
 .projectCard {
   min-width: 0;
-  border: 1px solid var(--border-subtle);
-  background: var(--color-graphite);
+  border: 1px solid var(--border);
+  background: var(--surface);
 }
 
 .projectFrame {
@@ -12,10 +12,10 @@
   overflow: hidden;
   padding: 0.9rem;
   background:
-    linear-gradient(rgba(237, 237, 232, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(237, 237, 232, 0.035) 1px, transparent 1px),
-    radial-gradient(ellipse at 70% 20%, rgba(61, 245, 255, 0.09), transparent 45%),
-    #09090a;
+    linear-gradient(color-mix(in srgb, var(--text) 3.5%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--text) 3.5%, transparent) 1px, transparent 1px),
+    radial-gradient(ellipse at 70% 20%, color-mix(in srgb, var(--accent) 9%, transparent), transparent 45%),
+    var(--bg);
   background-size: 1rem 1rem, 1rem 1rem, auto, auto;
 
   &::after {
@@ -23,7 +23,7 @@
     inset: 0;
     background: repeating-linear-gradient(
       transparent 0 4px,
-      rgba(237, 237, 232, 0.035) 4px 5px
+      color-mix(in srgb, var(--text) 3.5%, transparent) 4px 5px
     );
     content: "";
     pointer-events: none;
@@ -38,7 +38,7 @@
 }
 
 .frameIndex {
-  color: var(--color-ash);
+  color: var(--muted);
   font-family: var(--font-mono);
   font-size: 0.68rem;
   letter-spacing: 0.08em;
@@ -49,7 +49,7 @@
 .framePlaceholder {
   align-self: center;
   justify-self: center;
-  color: var(--color-ash);
+  color: var(--muted);
   font-family: var(--font-mono);
   font-size: 0.7rem;
   letter-spacing: 0.12em;
@@ -57,7 +57,7 @@
 }
 
 .frameName {
-  color: var(--color-bone);
+  color: var(--text);
   font-family: var(--font-display);
   font-size: clamp(2rem, 5vw, 4rem);
   line-height: 0.9;
@@ -89,7 +89,7 @@
 }
 
 .projectDescription {
-  color: var(--color-ash);
+  color: var(--muted);
   line-height: 1.65;
 }
 
@@ -100,7 +100,7 @@
   margin-top: 1.25rem;
 
   a {
-    color: var(--color-signal);
+    color: var(--accent);
     font-family: var(--font-mono);
     font-size: 0.72rem;
     text-decoration: underline;

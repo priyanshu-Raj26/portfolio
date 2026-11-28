@@ -2,7 +2,7 @@
 
 .section {
   padding-bottom: 3rem;
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border);
 }
 
 .contactGrid {
@@ -12,7 +12,7 @@
 }
 
 .contactCopy {
-  color: var(--color-ash);
+  color: var(--muted);
   font-family: var(--font-mono);
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -21,7 +21,7 @@
 .emailLink {
   display: inline-block;
   max-width: 100%;
-  color: var(--color-signal);
+  color: var(--accent);
   font-family: var(--font-display);
   font-size: clamp(1.7rem, 5vw, 4.5rem);
   line-height: 1;
@@ -37,8 +37,8 @@
 
 .contactLink {
   padding: 0.75rem;
-  border: 1px solid var(--border-subtle);
-  color: var(--color-bone);
+  border: 1px solid var(--border);
+  color: var(--text);
   font-family: var(--font-mono);
   font-size: 0.72rem;
   text-decoration: none;
@@ -49,8 +49,8 @@
   width: min(100%, 18rem);
   margin: 3rem 0 0 auto;
   padding: 0.6rem;
-  border: 1px solid var(--border-subtle);
-  background: var(--color-graphite);
+  border: 1px solid var(--border);
+  background: var(--surface);
 }
 
 .contactPortrait {

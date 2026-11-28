@@ -8,8 +8,8 @@
 .storyImageWrap {
   width: min(100%, 25rem);
   padding: 0.6rem;
-  border: 1px solid var(--border-subtle);
-  background: var(--color-graphite);
+  border: 1px solid var(--border);
+  background: var(--surface);
 
 }
 
@@ -34,12 +34,12 @@
 .infoBox {
   margin-top: 2rem;
   padding: 1.2rem;
-  border: 1px solid var(--border-subtle);
-  background: rgba(18, 18, 20, 0.8);
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface) 80%, transparent);
 
   p:last-child {
     margin-bottom: 0;
-    color: var(--color-ash);
+    color: var(--muted);
     line-height: 1.7;
   }
 }
@@ -53,7 +53,7 @@
   justify-content: space-between;
   gap: 1rem;
   padding-block: 1rem;
-  border-top: 1px solid var(--border-subtle);
+  border-top: 1px solid var(--border);
 
   h3,
   p {
@@ -68,7 +68,7 @@
   p,
   span {
     margin-top: 0.35rem;
-    color: var(--color-ash);
+    color: var(--muted);
     font-size: 0.8rem;
     line-height: 1.5;
   }

@@ -1,19 +1,19 @@
 .projectDetails {
   margin-top: 1.2rem;
   padding-top: 1rem;
-  border-top: 1px solid var(--border-subtle);
+  border-top: 1px solid var(--border);
 
   ul {
     display: grid;
     gap: 0.55rem;
     margin: 0;
     padding-left: 1.1rem;
-    color: var(--color-ash);
+    color: var(--muted);
     font-size: 0.84rem;
     line-height: 1.6;
   }
 
   li::marker {
-    color: var(--color-signal);
+    color: var(--accent);
   }
 }

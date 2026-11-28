@@ -1,8 +1,13 @@
 .section {
   overflow: hidden;
   padding: clamp(1.5rem, 5vw, 4rem);
-  border: 1px solid var(--border-subtle);
-  background: linear-gradient(130deg, #090a0b, #101113 55%, #08090a);
+  border: 1px solid var(--border);
+  background: linear-gradient(
+    130deg,
+    var(--bg),
+    color-mix(in srgb, var(--surface) 70%, var(--bg)) 55%,
+    var(--bg)
+  );
 }
 
 .horizonBackdrop {
@@ -10,10 +15,10 @@
   inset: 0;
   opacity: 0.7;
   background:
-    radial-gradient(circle at 78% 24%, rgba(237, 237, 232, 0.8) 0 1px, transparent 2px),
-    radial-gradient(circle at 65% 58%, rgba(237, 237, 232, 0.6) 0 1px, transparent 2px),
-    radial-gradient(circle at 92% 70%, rgba(61, 245, 255, 0.8) 0 1px, transparent 2px),
-    radial-gradient(ellipse at 85% 50%, rgba(61, 245, 255, 0.1), transparent 40%);
+    radial-gradient(circle at 78% 24%, color-mix(in srgb, var(--text) 80%, transparent) 0 1px, transparent 2px),
+    radial-gradient(circle at 65% 58%, color-mix(in srgb, var(--text) 60%, transparent) 0 1px, transparent 2px),
+    radial-gradient(circle at 92% 70%, color-mix(in srgb, var(--accent) 80%, transparent) 0 1px, transparent 2px),
+    radial-gradient(ellipse at 85% 50%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 40%);
   pointer-events: none;
 }
 
@@ -35,5 +40,5 @@
 
 .horizonSkills {
   padding-top: 1rem;
-  border-top: 1px solid var(--border-subtle);
+  border-top: 1px solid var(--border);
 }

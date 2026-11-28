@@ -14,7 +14,7 @@
 
   p:last-child {
     margin: 0;
-    color: var(--color-ash);
+    color: var(--muted);
     font-family: var(--font-mono);
     font-size: 0.7rem;
   }
@@ -28,8 +28,8 @@
 
 .learningCard {
   padding: 1rem;
-  border: 1px solid var(--border-subtle);
-  background: rgba(18, 18, 20, 0.72);
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface) 72%, transparent);
 
   h3,
   p:last-child {
@@ -43,7 +43,7 @@
 
   p:last-child {
     margin-top: 0.4rem;
-    color: var(--color-ash);
+    color: var(--muted);
     font-size: 0.8rem;
   }
 }

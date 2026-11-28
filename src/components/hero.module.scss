@@ -15,7 +15,7 @@
 
 .heroKicker {
   margin: 0 0 1.15rem;
-  color: var(--color-signal);
+  color: var(--accent);
   font-family: var(--font-mono);
   font-size: 0.72rem;
   letter-spacing: 0.08em;
@@ -38,7 +38,7 @@
 .heroRole {
   max-width: 32rem;
   margin: 1.5rem 0 0;
-  color: var(--color-ash);
+  color: var(--muted);
   font-size: clamp(1rem, 1.5vw, 1.25rem);
   line-height: 1.65;
 }
@@ -49,8 +49,8 @@
   gap: 0.65rem;
   margin-top: 1.25rem;
   padding: 0.55rem 0.7rem;
-  border: 1px solid var(--border-subtle);
-  color: var(--color-bone);
+  border: 1px solid var(--border);
+  color: var(--text);
   font-family: var(--font-mono);
   font-size: 0.7rem;
   text-transform: uppercase;
@@ -60,7 +60,7 @@
   width: 0.45rem;
   height: 0.45rem;
   border-radius: 50%;
-  background: var(--color-signal);
+  background: var(--accent);
 }
 
 .heroActions {
@@ -86,14 +86,14 @@
 
 .primaryAction {
   padding-inline: 1.1rem;
-  background: var(--color-signal);
-  color: var(--color-void);
+  background: var(--accent);
+  color: var(--bg);
 }
 
 .textAction {
-  color: var(--color-bone);
+  color: var(--text);
   text-decoration: underline;
-  text-decoration-color: var(--color-signal);
+  text-decoration-color: var(--accent);
   text-underline-offset: 0.35rem;
 }
 
@@ -109,7 +109,7 @@
   }
 
   dt {
-    color: var(--color-ash);
+    color: var(--muted);
     font-family: var(--font-mono);
     font-size: 0.6rem;
     text-transform: uppercase;
@@ -128,11 +128,11 @@
   opacity: 0.58;
   background: repeating-linear-gradient(
     90deg,
-    var(--color-bone) 0 1px,
+    var(--text) 0 1px,
     transparent 1px 3px,
-    var(--color-bone) 3px 5px,
+    var(--text) 3px 5px,
     transparent 5px 8px,
-    var(--color-bone) 8px 9px,
+    var(--text) 8px 9px,
     transparent 9px 13px
   );
 }
@@ -152,7 +152,7 @@
   font-size: clamp(5rem, 15vw, 12rem);
   line-height: 0.8;
   opacity: 0.25;
-  -webkit-text-stroke: 1px var(--color-ash);
+  -webkit-text-stroke: 1px var(--muted);
 }
 
 .portraitFrame {
@@ -160,15 +160,18 @@
   width: 100%;
   aspect-ratio: 3 / 4;
   overflow: hidden;
-  border: 1px solid var(--border-subtle);
-  background: var(--color-graphite);
+  border: 1px solid var(--border);
+  background: var(--surface);
   isolation: isolate;
 
   &::after {
     position: absolute;
     z-index: 1;
     inset: 45% 0 0;
-    background: linear-gradient(transparent, rgba(5, 5, 5, 0.8));
+    background: linear-gradient(
+      transparent,
+      color-mix(in srgb, var(--bg) 80%, transparent)
+    );
     content: "";
     pointer-events: none;
   }
@@ -186,8 +189,8 @@
   bottom: 0.7rem;
   width: 1rem;
   height: 1rem;
-  border-right: 1px solid var(--color-signal);
-  border-bottom: 1px solid var(--color-signal);
+  border-right: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
 }
 
 @include mixins.from(48rem) {

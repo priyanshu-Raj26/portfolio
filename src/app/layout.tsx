@@ -6,6 +6,7 @@ import {
   JetBrains_Mono,
   Michroma
 } from "next/font/google";
+import ThemeToggle from "../components/ThemeToggle";
 import "../styles/globals.scss";
 
 const anton = Anton({
@@ -66,7 +67,10 @@ export default function RootLayout({
       lang="en"
       className={`${anton.variable} ${instrumentSerif.variable} ${inter.variable} ${jetBrainsMono.variable} ${michroma.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        {process.env.NODE_ENV === "development" && <ThemeToggle />}
+      </body>
     </html>
   );
 }

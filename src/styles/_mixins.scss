@@ -19,3 +19,9 @@
     @content;
   }
 }
+
+@mixin from($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}

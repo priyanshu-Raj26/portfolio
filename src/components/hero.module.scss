@@ -15,7 +15,7 @@
 
 .heroKicker {
   margin: 0 0 1.15rem;
-  color: var(--accent);
+  color: var(--accent-text);
   font-family: var(--font-mono);
   font-size: 0.72rem;
   letter-spacing: 0.08em;
@@ -86,15 +86,45 @@
 
 .primaryAction {
   padding-inline: 1.1rem;
-  background: var(--accent);
-  color: var(--bg);
+  background: var(--accent-strong);
+  color: var(--on-accent);
+  transition: background-color 160ms ease;
+
+  &:hover {
+    background: color-mix(in srgb, var(--accent-strong) 88%, black);
+  }
+
+  &:active {
+    background: color-mix(in srgb, var(--accent-strong) 76%, black);
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    opacity: 0.55;
+    pointer-events: none;
+  }
 }
 
 .textAction {
-  color: var(--text);
+  color: var(--accent-text);
   text-decoration: underline;
-  text-decoration-color: var(--accent);
+  text-decoration-color: var(--accent-text);
   text-underline-offset: 0.35rem;
+
+  &:hover {
+    text-decoration-thickness: 2px;
+  }
+
+  &:active {
+    opacity: 0.75;
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    color: var(--muted);
+    opacity: 0.7;
+    pointer-events: none;
+  }
 }
 
 .heroMetadata {

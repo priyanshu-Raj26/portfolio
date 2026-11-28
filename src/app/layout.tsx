@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import {
   Anton,
   Instrument_Serif,
@@ -6,7 +6,6 @@ import {
   JetBrains_Mono,
   Michroma
 } from "next/font/google";
-import ThemeToggle from "../components/ThemeToggle";
 import "../styles/globals.scss";
 
 const anton = Anton({
@@ -57,6 +56,10 @@ export const metadata: Metadata = {
   }
 };
 
+export const viewport: Viewport = {
+  themeColor: "#D9482B"
+};
+
 export default function RootLayout({
   children
 }: Readonly<{
@@ -67,10 +70,7 @@ export default function RootLayout({
       lang="en"
       className={`${anton.variable} ${instrumentSerif.variable} ${inter.variable} ${jetBrainsMono.variable} ${michroma.variable}`}
     >
-      <body>
-        {children}
-        {process.env.NODE_ENV === "development" && <ThemeToggle />}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

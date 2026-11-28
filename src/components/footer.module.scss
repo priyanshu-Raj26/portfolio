@@ -18,7 +18,16 @@
   }
 
   a {
-    color: var(--text);
+    color: var(--accent-text);
     text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 0.25rem;
+    }
+
+    &:active {
+      opacity: 0.75;
+    }
   }
 }

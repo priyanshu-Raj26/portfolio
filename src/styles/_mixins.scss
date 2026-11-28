@@ -9,8 +9,8 @@
 
 @mixin focus-visible {
   &:focus-visible {
-    outline: none;
-    box-shadow: var(--focus-ring);
+    outline: 2px solid var(--accent-text);
+    outline-offset: 3px;
   }
 }
 

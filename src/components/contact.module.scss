@@ -21,12 +21,21 @@
 .emailLink {
   display: inline-block;
   max-width: 100%;
-  color: var(--accent);
+  color: var(--accent-text);
   font-family: var(--font-display);
   font-size: clamp(1.7rem, 5vw, 4.5rem);
   line-height: 1;
   overflow-wrap: anywhere;
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  &:active {
+    opacity: 0.75;
+  }
 }
 
 .contactLinks {
@@ -38,11 +47,20 @@
 .contactLink {
   padding: 0.75rem;
   border: 1px solid var(--border);
-  color: var(--text);
+  color: var(--accent-text);
   font-family: var(--font-mono);
   font-size: 0.72rem;
   text-decoration: none;
   text-transform: uppercase;
+
+  &:hover {
+    border-color: var(--accent);
+  }
+
+  &:active {
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+    opacity: 0.8;
+  }
 }
 
 .contactPhoto {

@@ -1,0 +1,39 @@
+.section {
+  overflow: hidden;
+  padding: clamp(1.5rem, 5vw, 4rem);
+  border: 1px solid var(--border-subtle);
+  background: linear-gradient(130deg, #090a0b, #101113 55%, #08090a);
+}
+
+.horizonBackdrop {
+  position: absolute;
+  inset: 0;
+  opacity: 0.7;
+  background:
+    radial-gradient(circle at 78% 24%, rgba(237, 237, 232, 0.8) 0 1px, transparent 2px),
+    radial-gradient(circle at 65% 58%, rgba(237, 237, 232, 0.6) 0 1px, transparent 2px),
+    radial-gradient(circle at 92% 70%, rgba(61, 245, 255, 0.8) 0 1px, transparent 2px),
+    radial-gradient(ellipse at 85% 50%, rgba(61, 245, 255, 0.1), transparent 40%);
+  pointer-events: none;
+}
+
+.section > *:not(.horizonBackdrop) {
+  position: relative;
+}
+
+.horizonContent {
+  display: grid;
+  gap: 2rem;
+
+  > p {
+    max-width: 56rem;
+    margin: 0;
+    font-size: clamp(1.15rem, 2.2vw, 1.7rem);
+    line-height: 1.65;
+  }
+}
+
+.horizonSkills {
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+}

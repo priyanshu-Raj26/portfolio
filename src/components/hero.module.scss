@@ -1,0 +1,218 @@
+@use "../styles/mixins" as mixins;
+
+.hero {
+  display: grid;
+  align-items: center;
+  gap: 3rem;
+  min-height: min(45rem, calc(100dvh - 7rem));
+  padding-block: 2rem;
+}
+
+.heroCopy {
+  position: relative;
+  z-index: 1;
+}
+
+.heroKicker {
+  margin: 0 0 1.15rem;
+  color: var(--color-signal);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.heroTitle {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(4.5rem, 11vw, 8rem);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1;
+}
+
+.heroNameLine {
+  display: block;
+}
+
+.heroRole {
+  max-width: 32rem;
+  margin: 1.5rem 0 0;
+  color: var(--color-ash);
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.65;
+}
+
+.availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 1.25rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--border-subtle);
+  color: var(--color-bone);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+.statusDot {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--color-signal);
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+  margin-top: 2rem;
+}
+
+.primaryAction,
+.textAction {
+  display: inline-flex;
+  min-height: 2.8rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.primaryAction {
+  padding-inline: 1.1rem;
+  background: var(--color-signal);
+  color: var(--color-void);
+}
+
+.textAction {
+  color: var(--color-bone);
+  text-decoration: underline;
+  text-decoration-color: var(--color-signal);
+  text-underline-offset: 0.35rem;
+}
+
+.heroMetadata {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  margin: 2rem 0 0;
+
+  div {
+    display: grid;
+    gap: 0.3rem;
+  }
+
+  dt {
+    color: var(--color-ash);
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    text-transform: uppercase;
+  }
+
+  dd {
+    margin: 0;
+    font-size: 0.8rem;
+  }
+}
+
+.barcode {
+  width: 10rem;
+  height: 2.3rem;
+  margin-top: 1.8rem;
+  opacity: 0.58;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--color-bone) 0 1px,
+    transparent 1px 3px,
+    var(--color-bone) 3px 5px,
+    transparent 5px 8px,
+    var(--color-bone) 8px 9px,
+    transparent 9px 13px
+  );
+}
+
+.heroPortrait {
+  position: relative;
+  width: min(100%, 34rem);
+  margin: 0 auto;
+}
+
+.outlineWord {
+  position: absolute;
+  top: 8%;
+  left: -20%;
+  color: transparent;
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 15vw, 12rem);
+  line-height: 0.8;
+  opacity: 0.25;
+  -webkit-text-stroke: 1px var(--color-ash);
+}
+
+.portraitFrame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background: var(--color-graphite);
+  isolation: isolate;
+
+  &::after {
+    position: absolute;
+    z-index: 1;
+    inset: 45% 0 0;
+    background: linear-gradient(transparent, rgba(5, 5, 5, 0.8));
+    content: "";
+    pointer-events: none;
+  }
+}
+
+.portraitPhoto {
+  width: 100%;
+  height: 100%;
+}
+
+.frameCorner {
+  position: absolute;
+  z-index: 2;
+  right: 0.7rem;
+  bottom: 0.7rem;
+  width: 1rem;
+  height: 1rem;
+  border-right: 1px solid var(--color-signal);
+  border-bottom: 1px solid var(--color-signal);
+}
+
+@include mixins.from(48rem) {
+  .hero {
+    grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.9fr);
+  }
+
+  .heroPortrait {
+    width: min(100%, 32rem);
+  }
+}
+
+@media (max-width: 47.99rem) {
+  .hero {
+    gap: 2.5rem;
+    min-height: 0;
+  }
+
+  .heroPortrait {
+    width: min(88%, 26rem);
+  }
+}
+
+@media (max-width: 22rem) {
+  .heroTitle {
+    font-size: 4.5rem;
+  }
+}

@@ -1,0 +1,66 @@
+.experienceList {
+  border-top: 1px solid var(--border-subtle);
+}
+
+.experienceEntry {
+  display: grid;
+  gap: 0.75rem;
+  padding-block: 1.4rem;
+  border-bottom: 1px solid var(--border-subtle);
+
+  h3 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 1.7rem;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+}
+
+.experienceInfoLabel {
+  margin-bottom: 0.35rem;
+}
+
+.experienceMeta {
+  p {
+    margin: 0 0 0.3rem;
+    color: var(--color-ash);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+  }
+}
+
+.experienceDepartment {
+  margin: 0.3rem 0;
+  color: var(--color-ash);
+  font-size: 0.85rem;
+}
+
+.experienceDetails {
+  display: grid;
+  gap: 0.55rem;
+  margin: 1rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--color-ash);
+  font-size: 0.84rem;
+  line-height: 1.6;
+
+  li::marker {
+    color: var(--color-signal);
+  }
+}
+
+.smallLink {
+  color: var(--color-signal);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
+
+@media (min-width: 48rem) {
+  .experienceEntry {
+    grid-template-columns: minmax(9rem, 0.4fr) minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+}

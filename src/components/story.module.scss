@@ -1,0 +1,102 @@
+@use "../styles/mixins" as mixins;
+
+.storyGrid {
+  display: grid;
+  gap: 2rem;
+}
+
+.storyImageWrap {
+  width: min(100%, 25rem);
+  padding: 0.6rem;
+  border: 1px solid var(--border-subtle);
+  background: var(--color-graphite);
+
+}
+
+.storyPhoto {
+  aspect-ratio: 3 / 4;
+}
+
+.storyImageCaption {
+  padding-inline: 0.3rem;
+}
+
+.storyContent {
+  min-width: 0;
+}
+
+.storyLead {
+  margin: 0;
+  font-size: clamp(1.3rem, 2.4vw, 2rem);
+  line-height: 1.5;
+}
+
+.infoBox {
+  margin-top: 2rem;
+  padding: 1.2rem;
+  border: 1px solid var(--border-subtle);
+  background: rgba(18, 18, 20, 0.8);
+
+  p:last-child {
+    margin-bottom: 0;
+    color: var(--color-ash);
+    line-height: 1.7;
+  }
+}
+
+.educationBlock {
+  margin-top: 2rem;
+}
+
+.educationEntry {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1rem;
+  border-top: 1px solid var(--border-subtle);
+
+  h3,
+  p {
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  p,
+  span {
+    margin-top: 0.35rem;
+    color: var(--color-ash);
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+}
+
+.educationMeta {
+  display: grid;
+  align-content: start;
+  justify-items: end;
+  text-align: right;
+}
+
+@include mixins.from(48rem) {
+  .storyGrid {
+    grid-template-columns: minmax(15rem, 0.7fr) minmax(0, 1.3fr);
+    align-items: start;
+    gap: clamp(2rem, 6vw, 6rem);
+  }
+}
+
+@media (max-width: 47.99rem) {
+  .educationEntry {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .educationMeta {
+    justify-items: start;
+    text-align: left;
+  }
+}

@@ -1,0 +1,47 @@
+@use "../styles/mixins" as mixins;
+
+.crewGrid {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+}
+
+.crewPlaceholder {
+  display: grid;
+  min-height: 18rem;
+  align-content: space-between;
+  justify-items: center;
+  margin: 0;
+  padding: 1rem;
+  border: 1px dashed var(--border-subtle);
+  background:
+    linear-gradient(rgba(237, 237, 232, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(237, 237, 232, 0.035) 1px, transparent 1px),
+    var(--color-graphite);
+  background-size: 1.2rem 1.2rem;
+
+  .crewPlaceholderLabel {
+    justify-self: start;
+  }
+
+  figcaption {
+    color: var(--color-ash);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+  }
+}
+
+.crewPlaceholderMark {
+  color: var(--color-signal);
+  font-family: var(--font-display);
+  font-size: 5rem;
+  font-weight: 400;
+}
+
+@include mixins.from(48rem) {
+  .crewGrid {
+    grid-template-columns: minmax(0, 1.4fr) minmax(15rem, 0.6fr);
+    gap: clamp(2rem, 6vw, 6rem);
+  }
+}

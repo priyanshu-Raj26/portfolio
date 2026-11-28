@@ -1,0 +1,145 @@
+@use "../styles/mixins" as mixins;
+
+.ascentGrid {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+}
+
+.skillsColumn {
+  position: relative;
+  display: grid;
+  gap: 0.9rem;
+  padding-left: 1.1rem;
+}
+
+.staircaseLine {
+  position: absolute;
+  top: 0;
+  bottom: 2rem;
+  left: 0;
+  width: 1px;
+  background: linear-gradient(var(--color-signal), transparent);
+}
+
+.skillGroup {
+  position: relative;
+  padding: 1rem;
+  border: 1px solid var(--border-subtle);
+  background: linear-gradient(110deg, var(--color-graphite), rgba(18, 18, 20, 0.55));
+
+  &::before {
+    position: absolute;
+    top: 1.3rem;
+    left: -1.45rem;
+    width: 0.55rem;
+    height: 0.55rem;
+    border: 1px solid var(--color-signal);
+    background: var(--color-void);
+    content: "";
+  }
+}
+
+.practiceNote {
+  max-width: 42rem;
+  color: var(--color-ash);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.dsaPanel {
+  padding: 1.25rem;
+  border: 1px solid var(--border-subtle);
+  background: var(--color-graphite);
+}
+
+.dsaPanelHeader {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+
+  h3 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+}
+
+.smallLink {
+  color: var(--color-signal);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 1.5rem 0 0;
+  border-top: 1px solid var(--border-subtle);
+  border-left: 1px solid var(--border-subtle);
+
+  div {
+    min-width: 0;
+    padding: 0.85rem;
+    border-right: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  dt {
+    color: var(--color-ash);
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    text-transform: uppercase;
+  }
+
+  dd {
+    margin: 0.55rem 0 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 3vw, 2.1rem);
+    line-height: 1;
+  }
+}
+
+.statsFootnote {
+  color: var(--color-ash);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  line-height: 1.6;
+}
+
+@include mixins.from(48rem) {
+  .ascentGrid {
+    grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.9fr);
+    gap: clamp(2rem, 6vw, 6rem);
+  }
+
+  .skillGroup:nth-of-type(2) {
+    margin-left: 0.75rem;
+  }
+
+  .skillGroup:nth-of-type(3) {
+    margin-left: 1.5rem;
+  }
+
+  .skillGroup:nth-of-type(4) {
+    margin-left: 2.25rem;
+  }
+
+  .skillGroup:nth-of-type(5) {
+    margin-left: 3rem;
+  }
+
+  .skillGroup:nth-of-type(6) {
+    margin-left: 3.75rem;
+  }
+
+  .skillGroup:nth-of-type(7) {
+    margin-left: 4.5rem;
+  }
+}

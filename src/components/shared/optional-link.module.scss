@@ -1,0 +1,15 @@
+.unavailableLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-ash);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+}
+
+.dashedMarker {
+  display: inline-block;
+  width: 2rem;
+  height: 0.5rem;
+  border-bottom: 1px dashed currentColor;
+}
